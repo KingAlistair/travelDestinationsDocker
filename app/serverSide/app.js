@@ -19,6 +19,11 @@ import destinationsRouter from './routers/destinationRouter.js';
 app.use('/api/users', usersRouter);
 app.use('/api/destinations', destinationsRouter);
 
+//For testing
+app.get('/', (req, res) => {
+  res.send('Backend is running');
+});
+
 
 app.listen(port, () => {
   console.log(`Express server is running on ${port}`);

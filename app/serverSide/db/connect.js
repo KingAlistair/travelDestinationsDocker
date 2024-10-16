@@ -1,6 +1,7 @@
 import mongoose from 'mongoose';
 
-const uri = 'mongodb://127.0.0.1:27017/travelDestinations';
+const uri = 'mongodb://mongodb:27017/travelDestinations';
+
 
 mongoose.connect(uri, {
   useNewUrlParser: true,

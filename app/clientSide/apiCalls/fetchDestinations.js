@@ -1,4 +1,4 @@
-const url = "http://127.0.0.1:3000/api/destinations";
+const url = "http://backend:3000/api/destinations";
 
 // Helper function to get JWT from localStorage
 function getAuthHeaders() {

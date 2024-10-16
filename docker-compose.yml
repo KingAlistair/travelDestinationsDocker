@@ -2,16 +2,12 @@ version: '3'
 services:
   backend:
     build:
-      context: ./app      
-      dockerfile: serverSide/Dockerfile 
+      context: ./app
+      dockerfile: serverSide/Dockerfile
     ports:
       - "3000:3000"
-    depends_on:
-      - mongodb
-    env_file:
-      - ./app/.env
-    environment:
-      - MONGO_URL=mongodb://mongodb:27017/travelDestinations
+    networks:
+      - app-network
 
   mongodb:
     image: mongo
@@ -19,15 +15,22 @@ services:
       - "27017:27017"
     volumes:
       - mongo-data:/data/db
+    networks:
+      - app-network
 
   frontend:
-    image: node:14 
+    image: node:19
     working_dir: /app
     volumes:
       - ./app/clientSide:/app
-    command: npx live-server --port=8080 --host=0.0.0.0 # Run live-server for frontend
+    command: npx live-server --port=8080 --host=0.0.0.0
     ports:
       - "8080:8080"
+    networks:
+      - app-network
 
 volumes:
   mongo-data:
+
+networks:
+  app-network:
