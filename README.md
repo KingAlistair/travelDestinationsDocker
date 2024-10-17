@@ -13,6 +13,7 @@ Make sure you have the following installed:
 Clone this repository to your local machine:
 ```bash
 git clone https://github.com/KingAlistair/travelDestinationsDocker.git
+```
 
 ### 2. Project Structure
 The repository contains the following main folders:
@@ -26,6 +27,7 @@ Use Docker Compose to build and start the application. This command will downloa
 
 ```bash
 docker-compose up --build
+```
 
 ### 4. Access the Application
 Once Docker Compose finishes setting up the containers, you can access the application:
@@ -36,13 +38,14 @@ MongoDB: The MongoDB database is accessible within the Docker network by the bac
 
 ### 5. Stop the Application
 To stop all running containers, use the following command:
-
-"docker-compose down"
+```bash
+docker-compose down
+```
 This will stop and remove all containers created by docker-compose up.
 
 Additional Information
 
 Images & Volumes:
 Multer is configured to save images to app/clientSide/destinationImages.
-The backend has access to hte clientSide/destinationImages folder to save destination images there
+The backend has access to the clientSide/destinationImages folder to save destination images.
 
