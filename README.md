@@ -43,7 +43,7 @@ docker-compose down
 ```
 This will stop and remove all containers created by docker-compose up.
 
-Additional Information
+## Additional Information
 
 Images & Volumes:
 Multer is configured to save images to app/clientSide/destinationImages.
