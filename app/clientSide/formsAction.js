@@ -110,7 +110,7 @@ const registerUser = async (e) => {
 
     alert(`User registered successfully. Welcome ${registeredUser.userName}! Please login!`);
 
-    window.location.replace("/clientSide/formsPage.html");
+    window.location.replace("/formsPage.html");
   } catch (error) {
     alert(error.message);
     console.error("Failed to register user:", error);
@@ -155,7 +155,7 @@ const signInUser = async (e) => {
 
         // Display success message and redirect to index
         alert(`You are now signed in. Welcome back ${authenticatedUser.user.userName}!`);
-        window.location.replace("/clientSide/index.html");
+        window.location.replace("/index.html");
       } catch (error) {
         console.error(`Error changing ${userEmail}'s isLoggedIn status: `, error);
         alert("An error occurred while updating your login status. Please try again.");

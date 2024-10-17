@@ -1,4 +1,4 @@
-const url = "http://backend:3000/api/users";
+const url = "http://localhost:3000/api/users";
 
 // Register user
 export async function createNewUser(userPayload) {
